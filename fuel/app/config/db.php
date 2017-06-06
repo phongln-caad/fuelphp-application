@@ -5,19 +5,13 @@
  * See the individual environment DB configs for specific config information.
  */
 
-return [
-//    Fuel::DEVELOPMENT => [
-//        'type' => 'mysql',
-//        'connection' => [
-//            'hostname' => 'localhost',
-//            'database' => 'blog_fuel',
-//            'username' => 'root',
-//            'password' => 'root',
-//            'persistent' => false
-//        ],
-//        'table_prefix' => '',
-//        'charset' => 'utf8',
-//        'caching' => false,
-//        'profiling' => false
-//    ]
-];
+return array(
+    'default' => array(
+        'connection'  => array(
+            'dsn'        => 'mysql:host=127.0.0.1:3306;dbname=fuelphp',
+            'username'   => 'root',
+            'password'   => 'root',
+        ),
+        'charset'   =>  'utf8',
+    )
+);

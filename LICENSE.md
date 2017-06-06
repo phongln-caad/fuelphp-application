@@ -1,5 +1,3 @@
-Cloned for non-commercial using by PhongLN
-
 Copyright (c) 2010-2016 Fuel Development Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

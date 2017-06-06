@@ -1,4 +1,5 @@
 <?php
+use Fuel\Core\Controller;
 /**
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *

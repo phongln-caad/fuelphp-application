@@ -3,7 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $title; ?></title>
-	<?php echo Asset::css('bootstrap.css'); ?>
+    <?php
+    echo Asset::css('bootstrap-theme-paper.min.css');
+//            echo Asset::css('bootstrap-theme-flatly.min.css');
+//            echo Asset::css('bootstrap-theme-superhero.min.css');
+    ?>
 	<style>
 		body { margin: 40px; }
 	</style>

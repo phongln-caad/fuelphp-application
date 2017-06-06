@@ -3,7 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>FuelPHP Framework</title>
-	<?php echo Asset::css('bootstrap.css'); ?>
+    <?php
+    echo Asset::css('bootstrap-theme-paper.min.css');
+    //        echo Asset::css('bootstrap-theme-flatly.min.css');
+    ?>
 	<style>
 		#logo{
 			display: block;

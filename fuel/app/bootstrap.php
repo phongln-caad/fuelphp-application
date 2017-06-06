@@ -1,6 +1,7 @@
 <?php
 // Bootstrap the framework DO NOT edit this
-require COREPATH.'bootstrap.php';
+require COREPATH . 'bootstrap.php';
+require APPPATH . 'helper_functions.php';
 
 \Autoloader::add_classes(array(
 	// Add classes you want to override here

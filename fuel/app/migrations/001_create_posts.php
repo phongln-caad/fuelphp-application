@@ -9,11 +9,8 @@ class Create_posts
 		\DBUtil::create_table('posts', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'title' => array('constraint' => 255, 'type' => 'varchar'),
-			'content' => array('type' => 'text'),
-			'cover' => array('constraint' => 255, 'type' => 'varchar'),
-			'status' => array('type' => 'tinyint'),
-			'created_by' => array('type' => 'tinyint'),
-			'updated_by' => array('type' => 'tinyint'),
+			'summary' => array('constraint' => 250, 'type' => 'varchar'),
+			'body' => array('type' => 'text'),
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 

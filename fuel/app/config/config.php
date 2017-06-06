@@ -93,7 +93,7 @@ return array(
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
 	// 'server_gmt_offset'  => 0,
-	// 'default_timezone'   => null,
+	 'default_timezone'   => 'Asia/Ho_Chi_Minh',
 
 	/**
 	 * Logging Threshold.  Can be set to any of the following:
@@ -113,17 +113,17 @@ return array(
 	 * Security settings
 	 */
 	'security' => array(
-		// 'csrf_autoload'            => false,
-		// 'csrf_autoload_methods'    => array('post', 'put', 'delete'),
-		// 'csrf_bad_request_on_fail' => false,
-		// 'csrf_auto_token'          => false,
-		// 'csrf_token_key'           => 'fuel_csrf_token',
-		// 'csrf_expiration'          => 0,
+		 'csrf_autoload'            => true,
+		 'csrf_autoload_methods'    => array('post', 'put', 'delete'),
+		 'csrf_bad_request_on_fail' => true,
+		 'csrf_auto_token'          => true,
+		 'csrf_token_key'           => 'fuel_csrf_token',
+		 'csrf_expiration'          => 0,
 
 		/**
 		 * A salt to make sure the generated security tokens are not predictable
 		 */
-		// 'token_salt'            => 'put your salt value here to make the token more secure',
+		 'token_salt'            => 'put your salt value here to make the token more secure',
 
 		/**
 		 * Allow the Input class to use X headers when present
@@ -160,28 +160,29 @@ return array(
 		/**
 		 * Encoding mechanism to use on htmlentities()
 		 */
-		// 'htmlentities_flags' => ENT_QUOTES,
+		 'htmlentities_flags' => ENT_QUOTES,
 
 		/**
 		 * Whether to encode HTML entities as well
 		 */
-		// 'htmlentities_double_encode' => false,
+		 'htmlentities_double_encode' => true,
 
 		/**
 		 * Whether to automatically filter view data
 		 */
-		// 'auto_filter_output'  => true,
+		 'auto_filter_output'  => true,
 
 		/**
 		 * With output encoding switched on all objects passed will be converted to strings or
 		 * throw exceptions unless they are instances of the classes in this array.
 		 */
-		'whitelisted_classes' => array(
+        'whitelisted_classes' => array(
 			'Fuel\\Core\\Presenter',
 			'Fuel\\Core\\Response',
 			'Fuel\\Core\\View',
 			'Fuel\\Core\\ViewModel',
-			'Closure',
+            'Fuel\\Core\\Validation',
+            'Closure',
 		),
 	),
 
@@ -259,7 +260,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	'always_load'  => array(
+	 'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -272,10 +273,10 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		'packages'  => array(
-			'orm',
-			'auth'
-		),
+		 'packages'  => array(
+		 	'orm',
+            'auth'
+		 ),
 
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
@@ -311,6 +312,15 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	),
+	 ),
+    /**
+     * Custom config to autoload
+     */
+    'params'  => [
+        'folder_upload' => 'files/',
+        'upload_path' => DOCROOT . 'files',
+//        'default_img' => 'files/default_img.jpg'
+        'default_img' => 'files/default_img.png'
+    ],
 
 );
